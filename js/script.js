@@ -18,7 +18,7 @@ const listTipografy = arrInvitati.map((el , i)=>{
     const finaList = {
         tableName : 'tavolo vip',
         guestName : el,
-        place : i
+        place : i + 1
     }
     return finaList
 })
@@ -72,4 +72,3 @@ console.log(voti)
 
 let votiEid = aula.filter(el => el.Grades > 70 && el.Id > 120);
 console.log(votiEid)
-
