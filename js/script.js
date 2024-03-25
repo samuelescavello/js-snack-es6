@@ -73,6 +73,10 @@
 // let votiEid = aula.filter(el => el.Grades > 70 && el.Id > 120);
 // console.log(votiEid)
 
+// Creare un array di oggetti:
+// Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+// Stampare in console la bici con peso minore utilizzando destructuring e template literal
+
 
 let biciDaCorsa = [
     { nome: "Bianchi Oltre XR4", peso: 7.1 },
@@ -87,11 +91,15 @@ let biciDaCorsa = [
     { nome: "Cervélo R5", peso: 7.2 }
 ];
 
-let firstBike = [0];
+let pesoMinimo = biciDaCorsa[0].peso;
+let biciPesoMinimo = biciDaCorsa[0].nome;
 
 for (let i = 1 ; i < biciDaCorsa.length ; i++){
-    if(biciDaCorsa[i].peso < firstBike.peso){
-        
+    if(biciDaCorsa[i].peso < pesoMinimo){
+        pesoMinimo = biciDaCorsa[i].peso;
+        biciPesoMinimo = biciDaCorsa[i].nome;
     }
 
 }
+
+console.log(`la bici con il peso minore é ${biciPesoMinimo} e il peso é ${pesoMinimo}`);
