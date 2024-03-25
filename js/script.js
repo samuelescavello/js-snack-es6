@@ -91,15 +91,30 @@ let biciDaCorsa = [
     { nome: "Cervélo R5", peso: 7.2 }
 ];
 
-let pesoMinimo = biciDaCorsa[0].peso;
-let biciPesoMinimo = biciDaCorsa[0].nome;
+// let pesoMinimo = biciDaCorsa[0].peso;
+// let biciPesoMinimo = biciDaCorsa[0].nome;
+let {nome, peso} = biciDaCorsa[0]
 
 for (let i = 1 ; i < biciDaCorsa.length ; i++){
-    if(biciDaCorsa[i].peso < pesoMinimo){
-        pesoMinimo = biciDaCorsa[i].peso;
-        biciPesoMinimo = biciDaCorsa[i].nome;
+    if(biciDaCorsa[i].peso < peso){
+        peso = biciDaCorsa[i].peso;
+        nome = biciDaCorsa[i].nome;
     }
 
 }
 
-console.log(`la bici con il peso minore é ${biciPesoMinimo} e il peso é ${pesoMinimo}`);
+console.log(`la bici con il peso minore é ${nome} e il peso é ${peso} (kg)`);
+
+
+// Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: 
+// nome, punti fatti, falli subiti.
+// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+// Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
+// Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono 
+// solo nomi e falli subiti e stampiamo tutto in console.
+
+let squadre = [
+    {nome : "juventus", puntifatti : 0 , fallisubiti : 0},
+    {nome : "inter", puntifatti : 0 , fallisubiti : 0},
+    {nome : "milan", puntifatti : 0 , fallisubiti : 0}
+]
