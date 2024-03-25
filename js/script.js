@@ -14,7 +14,15 @@
 //     'Fiorello'
 // ];
 
-// const listTipografy = arrInvitati.map((el , i)=>{
+// arrInvitati.push("amadeus");
+
+// prova()
+
+// function prova (argomento){
+
+// }
+
+// const listTipografy = arrInvitati.map(  (el , i) => {
 //     const finaList = {
 //         tableName : 'tavolo vip',
 //         guestName : el,
@@ -91,8 +99,7 @@ let biciDaCorsa = [
     { nome: "Cervélo R5", peso: 7.2 }
 ];
 
-// let pesoMinimo = biciDaCorsa[0].peso;
-// let biciPesoMinimo = biciDaCorsa[0].nome;
+
 let {nome, peso} = biciDaCorsa[0]
 
 for (let i = 1 ; i < biciDaCorsa.length ; i++){
@@ -102,6 +109,13 @@ for (let i = 1 ; i < biciDaCorsa.length ; i++){
     }
 
 }
+
+// biciDaCorsa.forEach( bicicletta => {
+//     if(bicicletta.peso < peso){
+//         peso = bicicletta.peso;
+//         nome = bicicletta.nome;
+//     }
+// });
 
 console.log(`la bici con il peso minore é ${nome} e il peso é ${peso} (kg)`);
 
@@ -118,3 +132,26 @@ let squadre = [
     {nome : "inter", puntifatti : 0 , fallisubiti : 0},
     {nome : "milan", puntifatti : 0 , fallisubiti : 0}
 ]
+
+squadre.forEach(el =>{
+    el.puntifatti = getRndInteger(1, 100)
+    el.fallisubiti = getRndInteger(1, 40)
+})
+
+let arrNew = [];
+for (let pippo of squadre){
+    arrNew.push(
+        {
+            name : pippo.nome,
+            puntifatti : pippo.puntifatti
+
+        }
+    )
+}
+console.log(arrNew)
+
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
